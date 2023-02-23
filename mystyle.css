@@ -21,13 +21,107 @@ body {
   }
 }
 .navbar-nav .check:hover {
-    border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.same {
+  color: white;
+}
+.same:hover {
+  border-bottom: 3px solid #0dcaf0;
+}
+
+.footer {
+  background-color: #212529;
+  /* margin: 0px auto; */
+}
+.address {
+  font-size: 80%;
+  margin: 0px;
+  color: #ffffff;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+.af {
+  padding: 4px;
+  font-size: 30px;
+  width: 42px;
+  text-align: center;
+  text-decoration: none;
+  margin: -4px 9px;
+  border-radius: 50%;
+}
+
+.af:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.carousel-item {
+    height: 300px;
+    object-fit: cover;
+  }
+
+/* .carousel { */
+    /* height: 400px; set a fixed height for the carousel */
+  /* } */
+  
+  /* .carousel-item img { */
+    /* height: 100%; set the height of the image to 100% of the carousel height */
+    /* object-fit: cover; scale the image to cover the entire carousel item */
+  /* } */
 /* 
 .main{
     background-color: darkslategray;
 } */
-
 
 /* .navbar-nav {
     display: flex;
