@@ -106,18 +106,42 @@ body {
   color: white;
 }
 .carousel-item {
-    height: 300px;
-    object-fit: cover;
-  }
+  height: 300px;
+  object-fit: cover;
+}
+/* .container.sign {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+} */
 
+.forgot-password {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+/* Style for the form labels */
+label {
+  font-weight: light;
+  color: #212529;
+}
+
+.form-control:focus {
+  border: 3px solid #00bfff;
+  box-shadow: none;
+}
+.input-decoration {
+  border: none;
+  border-bottom: 2px solid #007bff;
+  border-radius: 0;
+}
 /* .carousel { */
-    /* height: 400px; set a fixed height for the carousel */
-  /* } */
-  
-  /* .carousel-item img { */
-    /* height: 100%; set the height of the image to 100% of the carousel height */
-    /* object-fit: cover; scale the image to cover the entire carousel item */
-  /* } */
+/* height: 400px; set a fixed height for the carousel */
+/* } */
+
+/* .carousel-item img { */
+/* height: 100%; set the height of the image to 100% of the carousel height */
+/* object-fit: cover; scale the image to cover the entire carousel item */
+/* } */
 /* 
 .main{
     background-color: darkslategray;
