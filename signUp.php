@@ -22,7 +22,7 @@
                         <div class="input-box">
                             <header>Create account</header>
                             <div class="input-field">
-                                <input type="team_name" class="input" id="team_name" name="team_name" required autocomplete="off">
+                                <input type="text" class="input" id="team_name" name="team_name" required autocomplete="off">
                                 <label for="team_name">Team Name</label>
                             </div>
                             <div class="input-field">

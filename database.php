@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=irish_football_signup';
+    $dsn = 'mysql:host=localhost;dbname=irish_football_fantasy';
     $username = 'root';
     $password = '';
 

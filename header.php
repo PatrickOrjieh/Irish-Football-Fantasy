@@ -1,5 +1,5 @@
 <?php
-if(session_status() == PHP_SESSION_NONE){
+if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
 if (isset($_SESSION['user_team_name'])) {
@@ -47,7 +47,7 @@ if (isset($_SESSION['user_team_name'])) {
     <div class="col-12">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color: white;">
+          <a class="navbar-brand" href="./index.php" style="color: white;">
             <img src="./images/logo.png" id="logo" alt="Logo" width="30" height="24" class="d-inline-block">
             Ireland Fantasy
           </a>
@@ -58,7 +58,7 @@ if (isset($_SESSION['user_team_name'])) {
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" style="color: white;" href="#">Contact-Us</a>
+                <a class="nav-link" aria-current="page" style="color: white;" href="./contact-us.php">Contact-Us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" style="color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,10 +72,10 @@ if (isset($_SESSION['user_team_name'])) {
               </li>
               <li class="nav-item">
                 <?php if (isset($_SESSION['user_id'])) : ?>
-                  <button type="button" class="btn btn-danger">PLAY NOW</button>
+                  <a href="./playnow.php" type="button" class="btn btn-danger">PLAY NOW</a>
                 <?php else : ?>
                   <!-- <button type="button" class="btn btn-primary">LOG IN</button> -->
-                  <a href="#log" class="btn btn-primary" >SIGN IN</a>
+                  <a href="#log" class="btn btn-primary">SIGN IN</a>
                 <?php endif; ?>
               </li>
             </ul>

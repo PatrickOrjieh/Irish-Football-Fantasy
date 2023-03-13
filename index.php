@@ -68,19 +68,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <?php require('header.php'); ?>
   <main class="container-fluid">
     <?php if (isset($_SESSION['user_id'])) : ?>
-      <div class="container mb-2 bg-dark">
+      <div class="container mt-2 mb-2 bg-dark" style="background-image: url('./images/pitch.jpg');background-position: center; background-size:cover; background-repeat:no-repeat; position:relative; background: linear-gradient(to bottom, white, black);">
         <div class="row">
-          <div class="col-12 col-lg-5 text-center">
+          <!-- <div class="col-12 col-lg-4 text-center">
             <img src="./images/enter.png" style="width: 450px; height:400px;" class="img-fluid img-thumbnail" alt="...">
-          </div>
-          <div class="col-12 col-lg-7">
-            <div class="card text-center bg-dark" style="width: 30rem;">
+          </div> -->
+          <div class="col-12 col-lg-4">
+            <div class="card text-center" style="background:none; border:none;">
+            <!-- background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; -->
               <img src="./images/welcome.png" class="card-img-top mx-auto" alt="..." style="width: 200px; height:250px;" >
               <div class="card-body">
                 <p class="card-text">Welcome Manager to the club</p>
-                <p class="card-text" style="font-weight: bolder; font-size: 2.8em;"><?php echo $team_name; ?>!!!</p>
+                <p class="card-text" style="font-weight: bolder; font-size: 2.8em;"><?php echo $team_name; ?> FC !!!</p>
               </div>
             </div>
+          </div>
+          <div class="col-12 col-lg-8">
+          <img src="./images/mou2.png" style="width: 600px; height:380px; background:none; border: none;" class="img-fluid img-thumbnail" alt="...">
           </div>
         </div>
       </div>

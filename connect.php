@@ -36,6 +36,16 @@ if($_POST["password"] != $_POST["password_confirmation"]){
 
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
+//create the users table incase it doesn't exist
+$db->exec("CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL AUTO_INCREMENT,
+    team_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE (email)
+)");
+
 $stmt = $db->prepare("INSERT INTO users (team_name, email, password_hash) VALUES (?, ?, ?)");
 $stmt->execute([$_POST["team_name"], $_POST["email"], $password_hash]);
 
