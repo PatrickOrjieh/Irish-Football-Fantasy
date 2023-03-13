@@ -151,7 +151,7 @@ if ($_POST) {
 
     //when successful, redirect to the team page
     if ($team_stmt && $goalkeeper_stmt && $defender_stmt && $midfielder_stmt && $forward_stmt) {
-        header("refresh:2;url=index.php");
+        header("refresh:2;url=game.php");
     } else {
         echo 'Error';
     }

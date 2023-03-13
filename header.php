@@ -5,6 +5,13 @@ if (session_status() == PHP_SESSION_NONE) {
 if (isset($_SESSION['user_team_name'])) {
   $team_name = $_SESSION['user_team_name'];
 }
+
+require('database.php');
+//to check if there is a team name in the team_table 
+$team_name_stmt = $db->prepare("SELECT * FROM team_table WHERE team_name LIKE :team_name");
+$team_name_stmt->bindParam(':team_name', $team_name);
+$team_name_stmt->execute();
+$result = $team_name_stmt->fetch();
 ?>
 <div class="container-fluid fixed-top" style="position:sticky;">
   <div class="row align-items-center">
@@ -71,11 +78,14 @@ if (isset($_SESSION['user_team_name'])) {
                 </ul>
               </li>
               <li class="nav-item">
-                <?php if (isset($_SESSION['user_id'])) : ?>
-                  <a href="./playnow.php" type="button" class="btn btn-danger">PLAY NOW</a>
-                <?php else : ?>
-                  <!-- <button type="button" class="btn btn-primary">LOG IN</button> -->
+                <?php if (!isset($_SESSION['user_id'])) : ?>
                   <a href="#log" class="btn btn-primary">SIGN IN</a>
+                <?php else : ?>
+                  <?php if ($result) : ?>
+                    <a href="./game.php" type="button" class="btn btn-danger">PLAY NOW</a>
+                  <?php else : ?>
+                    <a href="./playnow.php" type="button" class="btn btn-danger">PLAY NOW</a>
+                  <?php endif; ?>
                 <?php endif; ?>
               </li>
             </ul>
