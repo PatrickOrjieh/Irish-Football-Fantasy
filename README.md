@@ -4,6 +4,7 @@ Welcome to Fantasy Soccer Game, the ultimate online platform for building your d
 ***
 ### Set up Instructions
 To access this web application, It can be found [Click Me !!!](https://mysql07.comp.dkit.ie/D00251785/assignment2/index.php)
+![Screenshot 2023-03-15 141113](https://user-images.githubusercontent.com/114187312/225335926-52f8ca41-fbce-41c6-bbe0-3ce17870f091.png)
 
 ***
 ### Usage Instructions
