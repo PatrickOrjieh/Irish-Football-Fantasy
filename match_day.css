@@ -1,0 +1,93 @@
+/* Background Image */
+.score {
+  font-size: 2rem;
+}
+.row {
+  background-image: url("./images/picth1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+}
+
+/* Team Names */
+.team-name {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+/* VS Section */
+.vs-section {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* Match Date */
+.match-date {
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px #000;
+}
+
+/* Match Description */
+.match-desc {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+/* Stadium Name */
+.stadium-name {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+/* Capacity */
+.capacity {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+/* Play Button */
+.btn-play {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-play:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .row {
+    height: 100%;
+  }
+}

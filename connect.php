@@ -42,6 +42,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS users (
     team_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
+    last_match INT NOT NULL DEFAULT 1,
     PRIMARY KEY (id),
     UNIQUE (email)
 )");

@@ -14,6 +14,7 @@ CREATE TABLE `irish_football_fantasy`.`team_table`
  `stadium_name` VARCHAR(40) ,
  `capacity` INT ,
  `city` VARCHAR(20),
+ `logo` VARCHAR(255),
  PRIMARY KEY (`team_id`));
 
 CREATE TABLE `irish_football_fantasy`.`players` 
@@ -58,30 +59,30 @@ CREATE TABLE `irish_football_fantasy`.`event`
   FOREIGN KEY (`match_id`) REFERENCES `fixtures`(`match_id`));
 
 INSERT INTO `team_table` 
-(`team_id`, `team_name`, `manager`, `stadium_name`, `capacity`, `city`) 
+(`team_id`, `team_name`, `manager`, `stadium_name`, `capacity`, `city`, `logo`) 
 VALUES 
-('AtC','Athlone Town', 'John Gill', 'Athlone Town Stadium', '5000', 'Athlone'), 
-('BrW', 'Bray Wanderers', 'Gary Cronin', 'Carlisle Grounds', '5000', 'Bray'), 
-('DeC', 'Derry City', 'Ruaidhri Higgins', 'The Ryan McBride Brandywell Stadium', '3700', 'Derry'),
-('ShR', 'Shamrock Rovers', 'Stephen Bradley', 'Tallaght Stadium', '8142', 'Tallaght'), 
-('StP', 'St.Patrick\'s', 'Tim Clancy', 'Richmond Park', '5340', 'Inchicore'),
-('SlR', 'Sligo Rovers', 'Liam Buckley', 'The Showgrounds', '3873', 'Sligo'), 
-('DuFC', 'Dundalk FC', 'Stephen O\'Donnell', 'Oriel Park', '4500', 'Dundalk'), 
-('BoB', 'Bohemian', 'Keith Long', 'Dalymount Park', '3640', 'Phibsborough'),
-('ShS', 'Shelbourne', 'Damien Duff', 'Tolka Park', '3600', 'Drumcondra'),
-('DrU', 'Drogheda Utd', 'Kevin Doherty', 'United Park', '2000', 'Drogheda'), 
-('FiH', 'Finn Harps', 'Ollie Horgan', 'Finn Park', '4600', 'Ballybofey'),
-('UCD', 'UC Dublin', 'Andrew Myler', 'UCD Bowl', '3000', 'Belfield'),
-('CoR','Cobh Ramblers FC','Shane Keegan','St Colman\'s Park', '5000','Cork'),
-('LoT', 'Longford Town', 'Daire Doyle', 'Bishopsgate', '5500', 'Longford'),
-('CcC', 'Cork City', 'Colin Healy', 'Turner\'s Cross', '7456', 'Cork'),
-('DlW', 'DLR Waves', 'Graham Kelly', 'Loughlinstown Leisure Centre', '4200', 'Dún Laoghaire Rathdown'),
-('GuU', 'Galway United', 'John Caulfield', 'Eamonn Deacy Park', '5200', 'Galway'),
-('KeF', 'Kerry FC', 'Jonathan Speak', 'Mounthawk Park', '3500', 'Tralee'),
-('PeU', 'Peamount United FC', 'James O\'Callaghan', 'PRL Park', '3000', 'Greenogue'),
-('TrU', 'Treaty United', 'Tommy Barrett', 'Markets Field', '5000', 'Limerick'),
-('WaF', 'Waterford', 'Marc Bircham', 'Waterford Regional Sports Centre', '5350', 'Waterford'),
-('WeF', 'Wexford', 'Ian Ryan', 'Ferrycarrig Park', '6000', 'Wexford');
+('AtC','Athlone Town', 'John Gill', 'Athlone Town Stadium', '5000', 'Athlone', 'https://upload.wikimedia.org/wikipedia/en/9/9c/AthloneTown.png'),
+('BrW', 'Bray Wanderers', 'Gary Cronin', 'Carlisle Grounds', '5000', 'Bray', 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Bray_Wanderers_2023.jpg'), 
+('DeC', 'Derry City', 'Ruaidhri Higgins', 'The Ryan McBride Brandywell Stadium', '3700', 'Derry', 'https://upload.wikimedia.org/wikipedia/en/c/c8/Derry_City_FC_logo.png'),
+('ShR', 'Shamrock Rovers', 'Stephen Bradley', 'Tallaght Stadium', '8142', 'Tallaght', 'https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Shamrock_Rovers_FC_logo.svg/1200px-Shamrock_Rovers_FC_logo.svg.png'), 
+('StP', 'St.Patrick\'s', 'Tim Clancy', 'Richmond Park', '5340', 'Inchicore', 'https://upload.wikimedia.org/wikipedia/en/5/57/St._Patrick%27s_Athletic_F.C._crest.png'),
+('SlR', 'Sligo Rovers', 'Liam Buckley', 'The Showgrounds', '3873', 'Sligo', 'https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Sligo_Rovers_FC_logo.svg/800px-Sligo_Rovers_FC_logo.svg.png'), 
+('DuFC', 'Dundalk FC', 'Stephen O\'Donnell', 'Oriel Park', '4500', 'Dundalk', 'https://upload.wikimedia.org/wikipedia/en/d/d5/Dundalk_F.C._Crest_2020.png'), 
+('BoB', 'Bohemian', 'Keith Long', 'Dalymount Park', '3640', 'Phibsborough', 'https://upload.wikimedia.org/wikipedia/en/2/27/BohemianDublin.png'),
+('ShS', 'Shelbourne', 'Damien Duff', 'Tolka Park', '3600', 'Drumcondra', 'https://upload.wikimedia.org/wikipedia/en/f/fc/Shels_logo_sml.png'),
+('DrU', 'Drogheda Utd', 'Kevin Doherty', 'United Park', '2000', 'Drogheda', 'https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Drogheda_United_FC.svg/1200px-Drogheda_United_FC.svg.png'), 
+('FiH', 'Finn Harps', 'Ollie Horgan', 'Finn Park', '4600', 'Ballybofey', 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Finn_Harps_FC_logo.svg/1200px-Finn_Harps_FC_logo.svg.png'),
+('UCD', 'UC Dublin', 'Andrew Myler', 'UCD Bowl', '3000', 'Belfield', 'https://upload.wikimedia.org/wikipedia/en/9/9e/UCD_Dublin.png'),
+('CoR','Cobh Ramblers FC','Shane Keegan','St Colman\'s Park', '5000','Cork', 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Cobh_Ramblers_FC_logo.svg/640px-Cobh_Ramblers_FC_logo.svg.png'),
+('LoT', 'Longford Town', 'Daire Doyle', 'Bishopsgate', '5500', 'Longford', 'https://upload.wikimedia.org/wikipedia/en/e/ea/LongfordTown.png'),
+('CcC', 'Cork City', 'Colin Healy', 'Turner\'s Cross', '7456', 'Cork', 'https://upload.wikimedia.org/wikipedia/en/a/a9/Cork-City-Football-Club-Crest.png'),
+('DlW', 'DLR Waves', 'Graham Kelly', 'Loughlinstown Leisure Centre', '4200', 'Dún Laoghaire Rathdown', 'https://upload.wikimedia.org/wikipedia/en/8/8c/DLR-Waves.png'),
+('GuU', 'Galway United', 'John Caulfield', 'Eamonn Deacy Park', '5200', 'Galway', 'https://img.rasset.ie/0001639f-1600.jpg'),
+('KeF', 'Kerry FC', 'Jonathan Speak', 'Mounthawk Park', '3500', 'Tralee', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUZNGqIIP_TsVGvfenK7aU2BrBpPSvdHg9A&usqp=CAU'),
+('PeU', 'Peamount United FC', 'James O\'Callaghan', 'PRL Park', '3000', 'Greenogue','https://static.hudl.com/users/temp/10808765_ef0b08611470479aa74e801068cb7b2d.jpeg'),
+('TrU', 'Treaty United', 'Tommy Barrett', 'Markets Field', '5000', 'Limerick', 'https://upload.wikimedia.org/wikipedia/en/9/93/Treaty_United_F.C._logo.png'),
+('WaF', 'Waterford', 'Marc Bircham', 'Waterford Regional Sports Centre', '5350', 'Waterford', 'https://waterfordfc.ie/wp-content/uploads/2022/12/cropped-favicon-1.png'),
+('WeF', 'Wexford', 'Ian Ryan', 'Ferrycarrig Park', '6000', 'Wexford', 'https://upload.wikimedia.org/wikipedia/en/a/ae/WEXFORD-FC-CREST.png');
 
 
 

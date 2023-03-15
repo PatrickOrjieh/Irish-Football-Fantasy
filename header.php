@@ -110,7 +110,7 @@ $result = $team_name_stmt->fetch();
       <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="container-fluid d-flex justify-content-around">
           <div class="navbar-nav">
-            <a class="nav-link check" href="#">Teams</a>
+            <a class="nav-link check" href="#">Results</a>
             <a class="nav-link check" href="#">League Table</a>
             <a class="nav-link check" href="#">Fixtures</a>
             <a class="nav-link check" href="#">Statistics</a>

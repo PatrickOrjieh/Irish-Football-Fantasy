@@ -73,17 +73,20 @@ if ($_POST) {
     $team_stmt->execute();
     $team = $team_stmt->fetch();
 
+    $logo = 'https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Brazilian_Football_Confederation_logo.svg/1200px-Brazilian_Football_Confederation_logo.svg.png';
+
     if ($team) {
         echo 'Team name already exists';
     } else {
         // to insert the team into the database
-        $team_stmt = $db->prepare("INSERT INTO team_table (team_id, team_name, manager, stadium_name, capacity, city) VALUES (:team_id, :team_name, :manager, :stadium_name, :capacity, :city)");
+        $team_stmt = $db->prepare("INSERT INTO team_table (team_id, team_name, manager, stadium_name, capacity, city, logo) VALUES (:team_id, :team_name, :manager, :stadium_name, :capacity, :city, :logo)");
         $team_stmt->bindParam(':team_id', $team_id);
         $team_stmt->bindParam(':team_name', $team_name);
         $team_stmt->bindParam(':manager', $manager['manager_name']);
         $team_stmt->bindParam(':stadium_name', $manager['stadium_name']);
         $team_stmt->bindParam(':capacity', $manager['capacity']);
         $team_stmt->bindParam(':city', $manager['city']);
+        $team_stmt->bindParam(':logo', $logo);
         $team_stmt->execute();
     }
 
@@ -151,6 +154,9 @@ if ($_POST) {
 
     //when successful, redirect to the team page
     if ($team_stmt && $goalkeeper_stmt && $defender_stmt && $midfielder_stmt && $forward_stmt) {
+
+        include 'fixtures.php';
+
         header("refresh:2;url=game.php");
     } else {
         echo 'Error';
