@@ -67,15 +67,12 @@ $result = $team_name_stmt->fetch();
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" style="color: white;" href="./contact-us.php">Contact-Us</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" style="color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Translate
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li class="nav-item">
+              <?php if (!isset($_SESSION['user_id'])) : ?>
+                
+              <?php else : ?>
+              <a class="nav-link"  style="color: white;" href="./league_fixtures.php">Fixtures</a>
+              <?php endif; ?>
               </li>
               <li class="nav-item">
                 <?php if (!isset($_SESSION['user_id'])) : ?>
@@ -105,14 +102,13 @@ $result = $team_name_stmt->fetch();
       </nav>
     </div>
   </div>
-  <div class="row align-items-center">
+  <!-- <div class="row align-items-center">
     <div class="col-12">
       <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="container-fluid d-flex justify-content-around">
           <div class="navbar-nav">
             <a class="nav-link check" href="#">Results</a>
             <a class="nav-link check" href="#">League Table</a>
-            <a class="nav-link check" href="./league_fixtures.php">Fixtures</a>
             <a class="nav-link check" href="#">Statistics</a>
             <a class="nav-link check" href="#">Players</a>
           </div>
@@ -120,6 +116,6 @@ $result = $team_name_stmt->fetch();
       </nav>
 
     </div>
-  </div>
+  </div> -->
 
 </div>

@@ -93,7 +93,7 @@ if (isset($_SESSION['user_team_name'])) {
                     <h3>Send us your Feedback</h3>
                 </div>
                 <div class="col-12 col-md-9">
-                    <form action="" id="feedbackForm" name="feedbackForm" method="post" onkeyup="return hideErrors()" onsubmit="return validateForm()" class="p-4 mx-auto border rounded" style="max-width: 600px;">
+                    <form action="contact-form-handler.php" id="feedbackForm" name="feedbackForm" method="post" onkeyup="return hideErrors()" onsubmit="return validateForm()" class="p-4 mx-auto border rounded" style="max-width: 600px;">
                         <div class="form-group mb-2">
                             <label for="firstname">First Name*</label>
                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required>

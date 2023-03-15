@@ -20,6 +20,9 @@ $get_match_id_stmt->execute();
 $game_id = $get_match_id_stmt->fetch();
 
 $match_id = $game_id['last_match'];
+if($match_id >= 10){
+    $match_id = 10;
+}
 
 $match_stmt = $db->prepare("SELECT * FROM fixtures WHERE match_day = :match_id AND (home_team = :team_id OR away_team = :team_id)");
 $match_stmt->bindParam(':match_id', $match_id);
