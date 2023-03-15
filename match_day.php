@@ -62,6 +62,8 @@ $update_stmt->bindParam(':match_id', $match_id);
 $update_stmt->bindParam(':user_id', $user_id);
 $update_stmt->execute();
 
+//redirect the page after the match has been played to the index page after 5 seconds
+header("refresh:95;url=index.php");
 
 ?>
 <!doctype html>
@@ -146,8 +148,8 @@ $update_stmt->execute();
             const randomScore1 = Math.floor(Math.random() * 2);
             // Update the scores
             homeScoreElement.textContent = homeScore + randomScore1;
-            // Wait a random amount of time (between 1 and 30 seconds) before updating the scores again
-            const timeToNextUpdate = Math.floor(Math.random() * 30000) + 1000;
+            // Wait a random amount of time (between 3 and 30 seconds) before updating the scores again
+            const timeToNextUpdate = Math.floor(Math.random() * 30000) + 3000;
             setTimeout(updateHomeScores, timeToNextUpdate);
         }
 
@@ -160,7 +162,7 @@ $update_stmt->execute();
             const awayScore = parseInt(awayScoreElement.textContent);
             const randomScore2 = Math.floor(Math.random() * 2);
             awayScoreElement.textContent = awayScore + randomScore2;
-            const timeToNextUpdate = Math.floor(Math.random() * 30000) + 1000;
+            const timeToNextUpdate = Math.floor(Math.random() * 30000) + 3000;
             setTimeout(updateAwayScores, timeToNextUpdate);
         }
 
@@ -168,9 +170,6 @@ $update_stmt->execute();
         updateHomeScores();
         updateAwayScores();
     </script>
-
-
-
 </body>
 
 </html>

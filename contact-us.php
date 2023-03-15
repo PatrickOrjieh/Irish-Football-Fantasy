@@ -249,10 +249,9 @@ if (isset($_SESSION['user_team_name'])) {
             let telnumRegex = /^\+353[-\s]?\d{9}$/;
             let address1Regex = /^[a-zA-Z0-9\s\.,\-\/\\()']+$/;
             let cityRegex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
-            let countyRegex = /\b(Co\.?\s)?(Antrim|Armagh|Carlow|Cavan|Clare|Cork|Derry|Donegal|Down|Dublin|Fermanagh|Galway|Kerry|Kildare|Kilkenny|Laois|Leitrim|Limerick|Longford|Louth|Mayo|Meath|Monaghan|Offaly|Roscommon|Sligo|Tipperary|Tyrone|Waterford|Westmeath|Wexford|Wicklow)\b/;
-            let postcodeRegex = /^(D6W|D6WF|D8W|D10|D12|D14|D16|D18|D20|D22|D24|A41|A42|A45|A63|A67|A75|C15|D01|D02|D03|D04|D05|D06|D07|D08|D09|D11|D13|D15|D17|E21|E25|E32|E34|E41|E45|E53|E91|F12|F23|F26|F28|F31|F35|F42|F45|F52|F56|F91|H12|H14|H16|H18|H23|H53|H54|H62|H65|H71|H91|K32|K34|K36|K45|K56|K67|K78|K79|N37|N39|N41|N91|P12|P14|P17|P24|P25|P31|P32|P36|P43|P47|P51|P56|R14|R21|R32|R35|R42|R45|R51|T12|T23|T34|T45|T56|V14|V15|V23|V31|V35|V42|V92)[A-Z0-9]{4}$/;
+            let countyRegex = /\b(Co\.?\s)?(antrim|armagh|carlow|cavan|clare|cork|derry|donegal|down|dublin|fermanagh|galway|kerry|kildare|kilkenny|laois|leitrim|limerick|longford|louth|mayo|meath|monaghan|offaly|roscommon|sligo|tipperary|tyrone|waterford|westmeath|wexford|wicklow)\b/;
+            let postcodeRegex = /^(D6W|D6WF|D8W|D10|D12|D14|D16|D18|D20|D22|D24|A41|A42|A45|A63|A67|A75|A91|C15|D01|D02|D03|D04|D05|D06|D07|D08|D09|D11|D13|D15|D17|E21|E25|E32|E34|E41|E45|E53|E91|F12|F23|F26|F28|F31|F35|F42|F45|F52|F56|F91|H12|H14|H16|H18|H23|H53|H54|H62|H65|H71|H91|K32|K34|K36|K45|K56|K67|K78|K79|N37|N39|N41|N91|P12|P14|P17|P24|P25|P31|P32|P36|P43|P47|P51|P56|R14|R21|R32|R35|R42|R45|R51|T12|T23|T34|T45|T56|V14|V15|V23|V31|V35|V42|V92)[A-Z0-9]{4}$/;
             let feedbackRegex = /^[a-zA-Z0-9\s,'-]*$/;
-
             if (firstname == "" || email == "" || feedback == "") {
                 document.getElementById("error").innerHTML = "Please fill out all required fields.";
                 document.getElementById("error").style.display = "block";
